@@ -1,4 +1,4 @@
-public class Main {
+public class Drink extends Food {
 
   /*
   Создать класс Food (еда). В классе должны быть:
@@ -15,15 +15,23 @@ public class Main {
           для негазированного - "скр"
 
    */
-  public static void main(String[] args) {
-    Food pizza = new Food("FIRE!!!!!");
-    pizza.setName("Fire!! with a red hot chili peppers");
-    System.out.println(pizza.getName());
-    System.out.println(pizza.useFood());
-    Drink beer = new Drink("Tuborg green", true);
-    System.out.println(beer.openDrink());
-    Drink water = new Drink("Water w/o carbon", false);
-    System.out.println(water.openDrink());
+  private final boolean carbonated;
 
+  public Drink(String name, boolean carbonated) {
+    super(name);
+    this.carbonated = carbonated;
   }
+
+  private boolean isCarbonated() {
+    return carbonated;
+  }
+
+  public String openDrink() {
+    String message = "Drink with name '" + getName() + "' make so when opened: ";
+    if (isCarbonated()) {
+      return message + "pssst";
+    }
+    return message + "сhpok";
+  }
+
 }
