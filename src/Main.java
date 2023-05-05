@@ -16,6 +16,9 @@ public class Main {
 
    */
   public static void main(String[] args) {
-
+    Food pizza = new Food("FIRE!!!!!");
+    pizza.setName("Fire!! with a red hot chili peppers");
+    System.out.println(pizza.getName());
+    System.out.println(pizza.useFood());
   }
 }

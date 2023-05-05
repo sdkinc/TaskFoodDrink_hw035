@@ -15,7 +15,6 @@ public class Food {
   }
 
   public String useFood() {
-    String result = "to your basket will add a one of " + getName();
-    return result;
+    return "are use an one piece of a '" + getName()+"'";
   }
 }
